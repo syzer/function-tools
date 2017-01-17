@@ -1,6 +1,6 @@
 {
   "name": "function-tools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Small (hopefully) library to interact with files in Functional Programmming Style",
   "main": "index.js",
   "dependencies": {
