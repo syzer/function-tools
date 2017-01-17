@@ -12,7 +12,7 @@ npm install function-tools --save
 # Usage
 
 ```js
-import { readFile, readFileStream, writeFile } from 'fp'
+import { readFile, readFileStream, writeFile } from 'function-file-tools'
 
 const test = readFile(__dirname + '/README.txt')
         .map(e => e.split(/\n|\t/gi))
