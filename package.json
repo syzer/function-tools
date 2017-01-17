@@ -9,7 +9,8 @@
     "object-stream-tools": "^2.3.0"
   },
   "devDependencies": {
-    "ava": "^0.17.0"
+    "ava": "^0.17.0",
+    "ramda": "^0.23.0"
   },
   "scripts": {
     "test": "ava"
@@ -23,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/syzer/function-tools/issues"
   },
-  "homepage": "https://github.com/syzer/function-tools#readme"
+  "homepage": "https://github.com/syzer/function-tools#readme",
+  "engines": {
+    "node": ">= 6"
+  }
 }
