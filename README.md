@@ -1,24 +1,40 @@
 # WAT
 
-Small (hopefully) library to interact with files in Functional Programmming Style
+Small (hopefully) library to interact with files in Functional Programming Style
 
 
 # How
 ```bash
-npm install function-tools --save
+npm install function-file-tools --save
 ```
 
 
 # Usage
 
+## Using node v.6
+
+```js
+const { readFileStream } = require('function-file-tools')
+const ost = require('object-stream-tools')
+
+const app = readFileStream(__dirname + '/README.md')
+    .map(ost.map(e => e.split(/\n|\t/gi))
+    .pipe(process.stdout))
+
+app.fork(console.error, console.log)
+```
+
+## Using node v.7 with --harmony
+
 ```js
 import { readFile, readFileStream, writeFile } from 'function-file-tools'
 
-const test = readFile(__dirname + '/README.txt')
+const app = readFile(__dirname + '/README.txt')
         .map(e => e.split(/\n|\t/gi))
         .chain(contents => writeFile(__dirname + '/.tmp.txt', contents))
 
-test.fork(console.error, console.log)
+// when you want to have side effect
+app.fork(console.error, console.log)
 ```
 
 
