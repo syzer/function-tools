@@ -1,6 +1,9 @@
 # WAT
 
-Small (hopefully) library to interact with files in Functional Programming Style
+Small (hopefully) library to interact with files in Functional Programming Style.
+
+## AKA
+All monad goodies of functional programing : `ramda`, `data.task` now combined with streams and node file programs.
 
 
 # How
@@ -11,7 +14,7 @@ npm install function-file-tools --save
 
 # Usage
 
-## Using node v.6
+## Using es2015 style with object-stream-tools
 
 ```js
 const { readFileStream } = require('function-file-tools')
@@ -23,6 +26,21 @@ const app = readFileStream(__dirname + '/README.md')
 
 app.fork(console.error, console.log)
 ```
+
+## Using ramda curried functions
+
+```js
+const { readFileStream } = require('function-file-tools')
+const ost = require('object-stream-tools')
+const { split } = require('ramda')
+
+const app = readFileStream(__dirname + '/README.md')
+    .map(ost.map(split(/\n|\t/gi))
+    .pipe(process.stdout))
+
+app.fork(console.error, console.log)
+```
+
 
 ## Using node v.7 with --harmony
 
