@@ -4,7 +4,7 @@
   "description": "Small (hopefully) library to interact with files in Functional Programmming Style",
   "main": "index.js",
   "dependencies": {
-    "ava": "^0.17.0",
+    "ava": "^0.18.2",
     "data.task": "^3.1.1",
     "object-stream-tools": "^2.3.0"
   },
