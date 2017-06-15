@@ -1,5 +1,7 @@
 # WAT [![Build Status](https://travis-ci.org/syzer/function-tools.svg?branch=master)](https://travis-ci.org/syzer/function-tools)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/syzer/function-tools.svg)](https://greenkeeper.io/)
+
 Small (hopefully) library to interact with files in Functional Programming Style.
 
 ## AKA
